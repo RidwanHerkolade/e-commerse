@@ -1427,16 +1427,15 @@ select {
       }
          
       header {
-           width: 100%;
+           max-width: 100%;
            display: flex;
-           color: var(--color-white);
-           overflow-x: hidden;
-         
+           color: var(--color-white);         
      }
     
      nav {
           
           width: 100%;
+          border: 2px solid yellow;
           position: relative;
           z-index: 5;
           display: flex;
@@ -1563,6 +1562,9 @@ select {
           overflow-y: hidden;
           width: 17rem;
           height: 470px;
+     }
+     .product__content h4 {
+          font-size: var(--ssmall-font);
      }
 
      .product__item_item {
