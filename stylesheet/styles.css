@@ -1301,15 +1301,15 @@ select {
      .billboard__grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; 
-          gap: 3rem;c
-          }
-          .billboard__content {
+          gap: 2rem;
+     }
+      .billboard__content {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 150px;
           height: 200px;
-         }
+     }
          .billboard__content img {
           width: 100px;
           height: 100px;
