@@ -1571,6 +1571,7 @@ select {
      }
      .product__grid {
           overflow-y: hidden;
+          width: 15rem;
      }
 
      .product__item_item {
