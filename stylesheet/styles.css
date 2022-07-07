@@ -1424,16 +1424,13 @@ select {
       * {
            padding: 0;
            margin: 0;
-           max-width: 100%;
       }
-      body {
-          overflow-x: hidden!important;
-      }
-    
+         
       header {
            width: 100%;
            display: flex;
            color: var(--color-white);
+           overflow-x: hidden;
          
      }
     
@@ -1565,7 +1562,7 @@ select {
      .product__grid {
           overflow-y: hidden;
           width: 17rem;
-          height: 465px;
+          height: 470px;
      }
 
      .product__item_item {
