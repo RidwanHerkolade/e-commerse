@@ -1434,8 +1434,7 @@ select {
     
      nav {
           
-          width: 100%;
-          border: 2px solid yellow;
+          max-width: 100%;
           position: relative;
           z-index: 5;
           display: flex;
