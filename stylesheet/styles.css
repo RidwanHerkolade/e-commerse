@@ -367,13 +367,16 @@ li a:hover{
      color: var(--color-hover);
      background: var(--color-cart);
      padding: 0.6rem;
+     display: flex;
+     overflow-y: hidden;
+     align-items: center;
      margin-right: 1rem;
      transition: all 0.03ms;
 }
 .price {
      position: relative;
      color: var(--color-hover);
-     bottom: 2rem;
+     bottom: 1rem;
       font-size: var(--header-font);
      font-weight: 600;
      
@@ -1181,8 +1184,6 @@ select {
      * {
           padding: 0;
           margin: 0;
-          /* overflow-x: hidden; */
-
      }
      header {
           width: 100%;
@@ -1191,7 +1192,7 @@ select {
          
      }
      nav {
-          position: fixed;
+          position: relative;
           z-index: 15;
           display: flex;
           justify-content: space-between;
@@ -1209,7 +1210,22 @@ select {
           flex-direction: column;
           width: 10rem;
           height: 100vh;
-          background: var(--color-white);
+         background: var(--color-white);
+         animation: movedown 1s linear 1;
+         animation-delay: 1s;
+         visibility: hidden;
+         animation-fill-mode: forwards;
+     }
+     @keyframes movedown {
+          0%{
+               transform: translateY(-50px);
+               visibility: visible;
+          }
+          100%{
+               transform: translateY(0);
+               visibility: visible;
+     
+          }
      }
      .nav__links li span {
           display: none;
@@ -1285,9 +1301,7 @@ select {
      .billboard__grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; 
-          gap: 3rem;
-          
-        
+          gap: 3rem;c
           }
           .billboard__content {
           display: flex;
@@ -1307,17 +1321,16 @@ select {
      .product__item_item {
           display: grid;
           grid-template-columns: 1fr 1fr; 
-          gap: 3rem;
+          gap: 1.5rem;
      }
 
      .product__grid {
           overflow-y: hidden;
           cursor: pointer;
-          height: 450px;
+          height: 460px;
           background: var(--color-white);
           box-shadow: var(--box-shadow);
            border-radius: 30px;
-      
      } 
   
     .product__img {
@@ -1328,12 +1341,12 @@ select {
            width: 90%;
            height: 300px;
            border-radius: 20px;
-       
      }
 
       .blogs__grid {
            display: grid;
            grid-template-columns: 1fr;
+          
      }
     .letter {
            display: flex;
@@ -1421,7 +1434,7 @@ select {
       * {
            padding: 0;
            margin: 0;
-           overflow-x: hidden;
+           max-width: 100%;
       }
     
       header {
@@ -1430,10 +1443,11 @@ select {
            color: var(--color-white);
          
      }
+    
      nav {
           
           width: 100%;
-          position: fixed;
+          position: relative;
           z-index: 5;
           display: flex;
           justify-content: space-between;
@@ -1443,14 +1457,17 @@ select {
           position: relative;
           
      }
+     .nav__links .close__btn span {
+          overflow-y: hidden;
+     }
      .nav__links {
           display: none;
-          position: fixed;
+          position: absolute;
           top: 0;
           right: 0;
           flex-direction: column;
-          width: 15rem;
-          height: 100vh;
+          width: 10rem;
+          height: 80vh;
           background: var(--color-white);
      }
      .nav__links li  {
@@ -1663,6 +1680,22 @@ select {
  .footer__grid {
       display: grid;
       grid-template-columns: 1fr 1fr ;   
+ }
+ .foooter {
+     gap: 10px;
+ }
+ .foooter img {
+     background: transparent;
+     border: 2px solid var(--color-hover);
+     border-radius: 6px;
+     width: 55px;
+ }
+ .payment {
+     display: flex;
+     gap: 1.5rem;
+ }
+ .payment img {
+     width: 100px;
  }
 
 .about__grid {
